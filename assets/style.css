@@ -1,0 +1,30 @@
+/* define primary colors */
+nav-wrapper {
+  background-color: #8e24aa;
+}
+
+#start-btn {
+  background-color: #d81b60;
+  color: #f5f5f5;
+}
+
+.custom-shape-divider-bottom-1606973803 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1606973803 svg {
+  position: relative;
+  display: block;
+  width: calc(142% + 1.3px);
+  height: 337px;
+}
+
+.custom-shape-divider-bottom-1606973803 .shape-fill {
+  fill: #8E24AA;
+}
+/*# sourceMappingURL=style.css.map */

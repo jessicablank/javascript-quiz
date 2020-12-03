@@ -1,0 +1,33 @@
+/* define primary colors */
+$primary_1: #8e24aa; //purple darken-1
+$primary_2: #d81b60; //pink darken-1
+$primary_grey: #f5f5f5; //grey lighten-5
+
+nav-wrapper{
+  background-color: $primary_1;
+}
+#start-btn{
+  background-color: $primary_2;
+  color: $primary_grey;
+}
+
+
+.custom-shape-divider-bottom-1606973803 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1606973803 svg {
+  position: relative;
+  display: block;
+  width: calc(142% + 1.3px);
+  height: 337px;
+}
+
+.custom-shape-divider-bottom-1606973803 .shape-fill {
+  fill: #8E24AA;
+}
