@@ -1,17 +1,38 @@
 // Declare game logic variables
 
-let currentQuestion = 0;
+let currentQuestionIndex = 0;
 
-let choiceEl = document.getElementById("choice");
-let questionEl = document.getElementById("question");
+let choiceEl = document.getElementById("choices");
+let questionEl = document.getElementById("questions");
 let startBtn = document.getElementById("start-btn");
 let submitBtn = document.getElementById("submit");
 
-function startQuiz(){
-    let homePage = document.getElementById("home-page");
-        homePage.setAttribute("class", "hide");
+function startQuiz() {
+  let homePage = document.getElementById("home-page");
+  homePage.setAttribute("class", "hide");
 
-        questionEl.removeAttribute("class")
+  questionEl.removeAttribute("class");
+
+  getQuestion();
 }
+
+function getQuestion() {
+  let currentQuestion = quizQuestions[currentQuestionIndex];
+
+  let questionText = document.getElementById("question-text");
+  questionText.textContent = currentQuestion.question;
+
+//   // Clear out old question choices
+//   choiceEl.innerHTML = "";
+
+  // Add a button to select each choice
+  currentQuestion.choices.forEach(listChoices);
+
+  function listChoices(choice, index) {
+    document.getElementById("choices").innerHTML +=index + ":" + choice + "<br>";
+}
+}
+
+// Button Actions
 
 startBtn.onclick = startQuiz;

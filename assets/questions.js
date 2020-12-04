@@ -1,4 +1,4 @@
-const questions = [
+const quizQuestions = [
   {
     question: "Strings in Javascript are enclosed in what type of punctuation?",
     choices: [
@@ -16,7 +16,7 @@ const questions = [
       "Nothing",
       "'Bumfuzzle' Once",
       "'Bumfuzzle' Three Times",
-      "Infinitity 'Bumfuzzle'",
+      "Infinity 'Bumfuzzle'",
     ],
     answer: "'Bumfuzzle' Three Times",
   },
