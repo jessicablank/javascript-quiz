@@ -11,7 +11,7 @@ nav-wrapper{
   color: $primary_grey;
 }
 
-
+// Home Page Divider
 .custom-shape-divider-bottom-1606973803 {
   position: absolute;
   bottom: 0;
@@ -31,6 +31,29 @@ nav-wrapper{
 .custom-shape-divider-bottom-1606973803 .shape-fill {
   fill: #8E24AA;
 }
+
+//Quiz Questions Divider
+.custom-shape-divider-bottom-1607048268 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1607048268 svg {
+  position: relative;
+  display: block;
+  width: calc(164% + 1.3px);
+  height: 362px;
+}
+
+.custom-shape-divider-bottom-1607048268 .shape-fill {
+  fill: #D81B60;
+}
+
 
 /* Octocat in the Right Corner Start*/
 
