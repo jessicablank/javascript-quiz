@@ -31,3 +31,27 @@ nav-wrapper{
 .custom-shape-divider-bottom-1606973803 .shape-fill {
   fill: #8E24AA;
 }
+
+/* Octocat in the Right Corner Start*/
+
+.github-corner svg{
+  position:absolute;
+  right: 0;
+	top:0;
+	color:#eeeeee;
+	fill:#353535;
+}
+.github-corner:hover .octo-arm{
+	animation:octocat-wave .56s;
+}
+@keyframes octocat-wave{
+	0%, 100%{
+		transform:rotate(0);
+	}
+	20%, 60%{
+		transform:rotate(-20deg);
+	}
+	40%, 80%{
+		transform:rotate(10deg);
+	}
+}

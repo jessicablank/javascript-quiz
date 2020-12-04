@@ -27,4 +27,48 @@ nav-wrapper {
 .custom-shape-divider-bottom-1606973803 .shape-fill {
   fill: #8E24AA;
 }
+
+/* Octocat in the Right Corner Start*/
+.github-corner svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #eeeeee;
+  fill: #353535;
+}
+
+.github-corner:hover .octo-arm {
+  -webkit-animation: octocat-wave .56s;
+          animation: octocat-wave .56s;
+}
+
+@-webkit-keyframes octocat-wave {
+  0%, 100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20%, 60% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  40%, 80% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
+
+@keyframes octocat-wave {
+  0%, 100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20%, 60% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  40%, 80% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+}
 /*# sourceMappingURL=style.css.map */
