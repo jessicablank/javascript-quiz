@@ -32,6 +32,15 @@ nav-wrapper{
   fill: #8E24AA;
 }
 
+button{
+  background-color: $primary_1;
+  color: $primary_grey;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
 //Quiz Questions Divider
 .custom-shape-divider-bottom-1607048268 {
   position: absolute;

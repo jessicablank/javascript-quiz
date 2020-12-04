@@ -28,6 +28,15 @@ nav-wrapper {
   fill: #8E24AA;
 }
 
+button {
+  background-color: #8e24aa;
+  color: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
 .custom-shape-divider-bottom-1607048268 {
   position: absolute;
   bottom: 0;

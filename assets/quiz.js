@@ -29,7 +29,15 @@ function getQuestion() {
   currentQuestion.choices.forEach(listChoices);
 
   function listChoices(choice, index) {
-    document.getElementById("choices").innerHTML +=index + ":" + choice + "<br>";
+    let choiceBtn = document.createElement("button");
+    choiceBtn.setAttribute("class", "choice");
+    choiceBtn.setAttribute("value", choice)
+
+    // increase index so it starts at 1 and not zero
+    choiceBtn.innerHTML += index + 1 + ") " + choice;
+
+    // display on the page
+    choiceEl.appendChild(choiceBtn);
 }
 }
 
