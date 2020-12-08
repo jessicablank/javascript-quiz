@@ -26,12 +26,12 @@ function startQuiz() {
 
 function timerCountdown(){
   timerInterval = setInterval(function(){
-    timeLeft--;
+    time--;
     timerEl.textContent = time;
 
-    if(timeLeft <=0){
-      timeLeft = 0;
-      timerEl.textContent = timeLeft;
+    if(time <=0){
+      time = 0;
+      timerEl.textContent = time;
       stopQuiz();
     }
   }, 1000);
@@ -77,11 +77,23 @@ function answerClick() {
      }
 
      timerEl.textContent = time;
+     responseEl.setAttribute("class", "response");
+     questionEl.setAttribute("class", "hide");
+  setTimeout(function () {
+    responseEl.setAttribute("class", "response hide");
+    
+  }, 1000);
 
      responseEl.textContent = "Nope"
     
   } else {
   
+    responseEl.setAttribute("class", "response");
+    questionEl.setAttribute("class", "hide");
+    setTimeout(function () {
+      responseEl.setAttribute("class", "response hide");
+      questionEl.removeAttribute("class");
+    }, 1000);
     responseEl.textContent = "Heck Yeah!";
   }
 
@@ -89,6 +101,7 @@ function answerClick() {
   responseEl.setAttribute("class", "response");
   setTimeout(function () {
     responseEl.setAttribute("class", "response hide");
+    questionEl.removeAttribute("class");
   }, 1000);
 
 // Move to the next question as long as there are questions
@@ -106,7 +119,7 @@ if (currentQuestionIndex === questions.length){
 function stopQuiz(){
     clearInterval(time);
 endScreenEl.removeAttribute("class");
-
+endScreenEl.textContent = "All Done";
 questionEl.setAttribute("class", "hide");
 }
 
