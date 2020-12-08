@@ -48,7 +48,7 @@
           </svg>
         </a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="#">View High Scores |</a></li>
+          <li><a href="highscores.html">View High Scores |</a></li>
           <li class="timer"> Timer: <span id="time"> 0 </span></li>
         </ul>
       </div>
@@ -109,10 +109,15 @@
       <div id="response" class="response hide">
       </div>
     </section>
-
-    <!-- Quiz End -->
+<!-- Quiz End -->
     <section class="container">
-      <div id="end-screen" class="hide">
+      <div id="end-screen" class="quiz-end hide">
+        <h2>Well Done!</h2>
+        <p>You completed the quiz in <span id="quiz-time"></span>seconds.</p>
+        <p>
+          Enter your initials to save your time: <input type="text" id="user-initials" max=3 />
+          <button id="submit">Save Score</button>
+        </p>
         <div class="custom-shape-divider-bottom-1607061032">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -122,6 +127,7 @@
       </div>
       </div>
     </section>
+    
 
     <!-- Compiled and minified JavaScript -->
     <script src=./assets/questions.js></script>

@@ -1,14 +1,14 @@
 // Declare game logic variables
 
 let currentQuestionIndex = 0;
-let time = questions.length * 10;
-console.log(questions.length)
+let time = questions.length * 11;
+
 let timerInterval;
-// let score = 0; Saving for future functionality
+let score = questions.length;
+console.log(score);
 
 
 let answerEl = document.getElementById("answers");
-let endScreenEl = document.getElementById("end-screen")
 let responseEl = document.getElementById("response");
 let homePage = document.getElementById("home-page");
 let questionEl = document.getElementById("questions");
@@ -24,19 +24,17 @@ function startQuiz() {
   getQuestion();
 }
 
-function timerCountdown(){
-  timerInterval = setInterval(function(){
+function timerCountdown() {
+  timerInterval = setInterval(function () {
     time--;
     timerEl.textContent = time;
 
-    if(time <=0){
+    if (time <= 0) {
       time = 0;
       timerEl.textContent = time;
       stopQuiz();
     }
   }, 1000);
-  
-
 }
 
 function getQuestion() {
@@ -45,22 +43,22 @@ function getQuestion() {
   let questionText = document.getElementById("question-text");
   questionText.textContent = currentQuestion.text;
 
-// Clear any old question answers
+  // Clear any old question answers
   answerEl.innerHTML = "";
 
-  // Dynamically add a button to select each answer 
+  // Dynamically add a button to select each answer
   currentQuestion.answers.forEach(listAnswers);
 
   function listAnswers(answer, index) {
     let answerBtn = document.createElement("button");
     answerBtn.setAttribute("class", "answer");
     answerBtn.setAttribute("value", answer);
- 
+
     // increase index so the display starts at 1 and not zero with a )
     answerBtn.innerHTML += index + 1 + ") " + answer;
 
     // Make sure the page is listening for a click from the user
-     answerBtn.onclick = answerClick; 
+    answerBtn.onclick = answerClick;
 
     // display on the page
     answerEl.appendChild(answerBtn);
@@ -69,25 +67,22 @@ function getQuestion() {
 
 function answerClick() {
   if (this.value !== questions[currentQuestionIndex].correctAnswer) {
-      //penalize time and update timer on page
-     time -=10;
+    //penalize time and update timer on page
+    time -= 10;
 
-     if (time < 0){
-       time = 0;
-     }
+    if (time < 0) {
+      time = 0;
+    }
 
-     timerEl.textContent = time;
-     responseEl.setAttribute("class", "response");
-     questionEl.setAttribute("class", "hide");
-  setTimeout(function () {
-    responseEl.setAttribute("class", "response hide");
-    
-  }, 1000);
+    timerEl.textContent = time;
+    responseEl.setAttribute("class", "response");
+    questionEl.setAttribute("class", "hide");
+    setTimeout(function () {
+      responseEl.setAttribute("class", "response hide");
+    }, 1000);
 
-     responseEl.textContent = "Nope"
-    
+    responseEl.textContent = "Nope";
   } else {
-  
     responseEl.setAttribute("class", "response");
     questionEl.setAttribute("class", "hide");
     setTimeout(function () {
@@ -104,25 +99,38 @@ function answerClick() {
     questionEl.removeAttribute("class");
   }, 1000);
 
-// Move to the next question as long as there are questions
-currentQuestionIndex++;
+  // Move to the next question as long as there are questions
+  currentQuestionIndex++;
 
-if (currentQuestionIndex === questions.length){
+  if (currentQuestionIndex === questions.length) {
     stopQuiz();
-} else {
+  } else {
     getQuestion();
-}
-
+  }
 }
 
 //Show End Screen and Hide Questions
-function stopQuiz(){
-    clearInterval(time);
-endScreenEl.removeAttribute("class");
-endScreenEl.textContent = "All Done";
-questionEl.setAttribute("class", "hide");
-}
+function stopQuiz() {
+  //Stop the Timer
+  clearInterval(timerInterval)
 
+  localStorage.setItem("quiz-time", time)
+
+  //Show to Quiz-End Page
+  setTimeout(function () {
+    let endScreenEl = document.getElementById("end-screen")
+    endScreenEl.removeAttribute("class");
+    questionEl.setAttribute("class", "hide");
+  }, 1000);
+
+ 
+  
+
+  let quizTimeResultEl = document.getElementById("quiz-time");
+  quizTimeResultEl.textContent = time;
+  console.log(time)
+
+}
 
 // Button Actions
 

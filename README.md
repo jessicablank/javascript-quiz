@@ -10,7 +10,7 @@
 
 
 ## Description:  
- A . 
+A vanilla Javascript quiz written with 
     
 ## Table of Contents:
 * [Project Story](#project-story)
