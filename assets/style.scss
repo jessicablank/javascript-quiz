@@ -32,13 +32,26 @@ nav-wrapper{
   fill: #8E24AA;
 }
 
+//Quiz Answer Button Styling
 button{
   background-color: $primary_1;
   color: $primary_grey;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-style: italic;
   margin: 1rem;
   padding: 1rem;
+  border: 1px solid;
+  box-shadow: 5px 10px $primary_grey;
   cursor: pointer;
+
+}
+
+//Quiz Response Styling
+#response{
+  text-align: center;
+  font-weight: bold;
+  font-size: 10rem;
 }
 
 //Quiz Questions Divider
@@ -62,6 +75,31 @@ button{
 .custom-shape-divider-bottom-1607048268 .shape-fill {
   fill: #D81B60;
 }
+
+
+//End Screen Divider
+.custom-shape-divider-bottom-1607061032 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1607061032 svg {
+  position: relative;
+  display: block;
+  width: calc(164% + 1.3px);
+  height: 133px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1607061032 .shape-fill {
+  fill: #D81B60;
+}
+
 
 
 /* Octocat in the Right Corner Start*/
