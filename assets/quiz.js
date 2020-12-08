@@ -5,7 +5,7 @@ let time = questions.length * 11;
 
 let timerInterval;
 let score = questions.length;
-console.log(score);
+
 
 
 let answerEl = document.getElementById("answers");
@@ -69,6 +69,7 @@ function answerClick() {
   if (this.value !== questions[currentQuestionIndex].correctAnswer) {
     //penalize time and update timer on page
     time -= 10;
+    score -= 1;
 
     if (time < 0) {
       time = 0;
@@ -128,7 +129,10 @@ function stopQuiz() {
 
   let quizTimeResultEl = document.getElementById("quiz-time");
   quizTimeResultEl.textContent = time;
-  console.log(time)
+
+  let quizScoreResultEl = document.getElementById("quiz-score");
+  quizScoreResultEl.textContent = score;
+
 
 }
 
