@@ -16,6 +16,7 @@ Please feel free to contribute quiz questions in questions.js.
 
 ## Table of Contents:
 * [Project Story](#project-story)
+* [Action Gif](#action-gif)
 * [Local Installation](#local-installation)
 * [Technologies Used](#technologies-used)
 * [File Structure](#file-structure)
@@ -35,11 +36,43 @@ The Minimum Viable Product (MVP) for this assignment requirements are:
 ### Re-do
 I was bothered by the general requirements that did not require the application to display a score to the user. I added that functionality as well as some fun response feedback as the user is taking the quiz. 
 
-I challenged myself to use Materialize frame along with SCSS because I am more comfortable with Bootstrap. Both are fun tools to create a colorful and responsive application. 
+## Action Gif
 
+![JSQuiz](assets/JavascriptQuiz.gif "JavaScript Quiz in Action")
 
+## Local Installation
+
+Fork, Clone, or Download! 
+
+Runs in browser and no dependencies. The [VS Code Live SASS Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) extension is very handy if you would like to edit the .scss file.  
+
+## Technologies Used
+I challenged myself to use Materialize frame along with SCSS because I am more comfortable with [Bootstrap](https://getbootstrap.com/). I found both CSS tools to be an excellent combination for creating a colorful and responsive application.
+
+- [Materialize CSS](https://materializecss.com/)
+- [Sass CSS](https://sass-lang.com/)
+- [Shape Divider App](https://www.shapedivider.app/)
+
+## File Structure
+```
+├── assets
+|  ├── highscores.js
+|  ├── questions.js <---~~^-^~~Contribute Here ~~^-^~~~---->
+|  ├── quiz.js
+|  ├── style.css
+|  ├── style.css.map
+|  └── style.scss
+├── highscores.html
+├── index.html
+└── README.md
+```
+
+## Questions
+You can reach the author, Jessica Blankemeier, via [jessicablankemeier@gmail.com](mailto:jessicablankemeier@gmail.com)
 
 ## License
 Copyright 2020 - present Jessica Blankemeier.
 This project is licensed under the terms of the MIT license. 
 More information is available at [opensource.org/licenses](https://opensource.org/licenses/MIT)
+
+[Back to Top](#table-of-contents)
