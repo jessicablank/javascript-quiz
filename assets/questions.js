@@ -41,4 +41,16 @@ let questions = [
     ],
     correctAnswer: "'Hello World' is printed to the console",
   },
+  {
+    text:
+      "Which two values does a JavaScript Boolean represent:",
+    answers: [
+      "Yes or No",
+      "Dog or Cat",
+      "True or False",
+      "On or Off",
+      "Broken or Fixed",
+    ],
+    correctAnswer: "True or False",
+  },
 ];
