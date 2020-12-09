@@ -118,7 +118,7 @@ function stopQuiz() {
   //Stop the Timer
   clearInterval(timerInterval);
 
-  //Show to Quiz-End Page
+  // Add a delay to prevent overlap with question response
   setTimeout(function () {
     let endScreenEl = document.getElementById("end-screen");
     endScreenEl.removeAttribute("class");
@@ -147,22 +147,21 @@ function saveHighScores() {
   if (initials === ""){
     let highScoreHelperEl = document.getElementById("highScore-helper")
     highScoreHelperEl.textContent = "Please enter your initials"
-  }
-
-  // set initials to local storage as long as
-  if (initials !== "") {
+  } else {
+ // set initials to local storage along with time
     let highScores =
       JSON.parse(window.localStorage.getItem("highScores")) || [];
 
     let newHighScore = {
       time,
       initials,
+      score
     };
 
     highScores.push(newHighScore);
     window.localStorage.setItem("highScores", JSON.stringify(highScores));
 
-    windows.location.href = "highscores.html";
+    window.location.href = "highScores.html";
   }
 }
 
