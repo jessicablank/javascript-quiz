@@ -10,7 +10,7 @@
 
 
 ## Description:  
-A timed vanilla Javascript quiz coded with HTML, Javascript, and SCSS. The High Scores are saved in local storage so you can see your improvement over time! 
+A timed vanilla JavaScript quiz coded with HTML, JavaScript, and SCSS. The High Scores are saved in local storage so you can see your improvement over time! 
 
 Please feel free to contribute quiz questions in questions.js. 
 
@@ -34,7 +34,7 @@ The Minimum Viable Product (MVP) for this assignment requirements are:
 - The user can save their initials and score in local storage. 
 
 ### Re-do
-I was bothered by the general requirements that did not require the application to display a score to the user. I added that functionality as well as some fun response feedback as the user is taking the quiz. 
+I was bothered by the fact that the initial requirements that did not require the application to display a score to the user. I added score functionality as well as some fun response feedback as the user is taking the quiz. 
 
 ## Action Gif
 
@@ -47,7 +47,7 @@ Fork, Clone, or Download!
 Runs in browser and no dependencies. The [VS Code Live SASS Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) extension is very handy if you would like to edit the .scss file.  
 
 ## Technologies Used
-I challenged myself to use Materialize frame along with SCSS because I am more comfortable with [Bootstrap](https://getbootstrap.com/). I found both CSS tools to be an excellent combination for creating a colorful and responsive application.
+I challenged myself to use Materialize framework along with SCSS because I am more comfortable with [Bootstrap](https://getbootstrap.com/). I found both CSS tools to be an excellent combination for creating a colorful and responsive application.
 
 - [Materialize CSS](https://materializecss.com/)
 - [Sass CSS](https://sass-lang.com/)
