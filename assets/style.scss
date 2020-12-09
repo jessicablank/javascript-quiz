@@ -11,7 +11,7 @@ nav-wrapper{
   color: $primary_grey;
 }
 
-#quiz-time{
+.quiz-results{
   color: $primary_1;
   font-weight: bold;
 }
@@ -56,7 +56,7 @@ button{
 #response{
   text-align: center;
   font-weight: bold;
-  font-size: 10rem;
+  font-size: 8rem;
   background-color: $primary_2;
   color: $primary_grey;
 }

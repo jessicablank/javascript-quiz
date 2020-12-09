@@ -113,10 +113,16 @@
     <section class="container">
       <div id="end-screen" class="quiz-end hide">
         <h2>Well Done!</h2>
-        <p>You completed the quiz in <span id="quiz-time"> </span> seconds.</p>
-        <p>And you answered <span id="quiz-score"> </span> questions correctly.</p>
+        <p>You completed the quiz in <span class="quiz-results" id="quiz-time"> </span> seconds.</p>
+        <p>And you answered <span class="quiz-results" id="quiz-score"> </span> questions correctly.
+        That's a <span class="quiz-results" id="quiz-score-percent"></span> percent success rate.</p>
         <p>
-          Enter your initials below to save your time and score: <input type="text" id="user-initials" max=3 />
+          Enter your initials below to save your time and score: 
+          <div class="input-field">
+            <i class="material-icons prefix">account_circle</i>
+          <input type="text" id="user-initials" maxlength="3" class="validate" required />
+          <span class="helper-text" id="highScore-helper" data-error="Please End 3 Letters" data-success="nice!">Please enter up to 3 letters</span>
+        </div>
           <button id="submit">Save Score</button>
         </p>
         <div class="custom-shape-divider-bottom-1607061032">
