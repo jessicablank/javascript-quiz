@@ -10,8 +10,10 @@
 
 
 ## Description:  
-A vanilla Javascript quiz written with 
-    
+A timed vanilla Javascript quiz coded with HTML, Javascript, and SCSS. The High Scores are saved in local storage so you can see your improvement over time! 
+
+Please feel free to contribute quiz questions in questions.js. 
+
 ## Table of Contents:
 * [Project Story](#project-story)
 * [Local Installation](#local-installation)
@@ -21,17 +23,21 @@ A vanilla Javascript quiz written with
 * [License](#license-info)
 
 ## Project Story
-This was a homework assignment during coding boot camp that I did not complete. I created a landing index.html, wrote a few javascript questions, and did not give my fledging programmer brain enough time to plan and complete. I submitted my one html page and was kindly allowed to continue with the boot camp. 
+This was my first coding crash during coding boot camp. I didn't give myself enough time to complete the assignment between classes, work, and the general malaise of 2020. I asked the teacher if he thought I could continue with boot camp. His advice was to keep going and come back to this one later, so I did just that.
 
 ### MVP
-The Minimum Viable Product (MVP) for this assignment required the following to generate a secure password for an internet user:
+The Minimum Viable Product (MVP) for this assignment requirements are:
 - Upon clicking the `start` button, the user will be presented with quiz questions as a timer counts downs. 
 - For every wrong answer, time will be subtracted from the clock. 
 - When all questions are answered or the timer reaches zero, the quiz is over and the user is presented with a score. 
 - The user can save their initials and score in local storage. 
 
- 
 ### Re-do
+I was bothered by the general requirements that did not require the application to display a score to the user. I added that functionality as well as some fun response feedback as the user is taking the quiz. 
+
+I challenged myself to use Materialize frame along with SCSS because I am more comfortable with Bootstrap. Both are fun tools to create a colorful and responsive application. 
+
+
 
 ## License
 Copyright 2020 - present Jessica Blankemeier.
