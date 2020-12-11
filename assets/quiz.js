@@ -103,7 +103,7 @@ function answerClick() {
     questionEl.removeAttribute("class");
   }, 1000);
 
-  // Move to the next question as long as there are questions
+  // Check to see if there are questions. If so, continue the quiz. 
   currentQuestionIndex++;
 
   if (currentQuestionIndex === questions.length) {
@@ -138,7 +138,7 @@ function stopQuiz() {
   quizScorePercentageResultEl.textContent = scorePercent;
 }
 
-//Save high scores
+//Save high scores to local storage
 
 function saveHighScores() {
   let initialsEl = document.getElementById("user-initials");

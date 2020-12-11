@@ -6,10 +6,29 @@ $primary_grey: #f5f5f5; //grey lighten-5
 nav-wrapper{
   background-color: $primary_1;
 }
-#start-btn{
+
+// Button Styling
+#start-btn, #clear-btn{
   background-color: $primary_2;
   color: $primary_grey;
+  font-style: italic;
+  font-weight: bold;
 }
+
+//Quiz Answer Button Styling
+.answer{
+  background-color: $primary_1;
+  color: $primary_grey;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid;
+  box-shadow: 5px 10px $primary_grey;
+  cursor: pointer;
+
+}
+
 
 .quiz-results{
   color: $primary_1;
@@ -37,22 +56,9 @@ nav-wrapper{
   fill: #8E24AA;
 }
 
-//Quiz Answer Button Styling
-button{
-  background-color: $primary_1;
-  color: $primary_grey;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: bold;
-  font-style: italic;
-  margin: 1rem;
-  padding: 1rem;
-  border: 1px solid;
-  box-shadow: 5px 10px $primary_grey;
-  cursor: pointer;
 
-}
 
-//Quiz Response Styling
+//Quiz Feedback Response Styling
 #response{
   text-align: center;
   font-weight: bold;
