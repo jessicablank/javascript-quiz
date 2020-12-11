@@ -53,4 +53,14 @@ let questions = [
     ],
     correctAnswer: "True or False",
   },
+  {
+    text:
+      "Select the function expressin",
+    answers: [
+      "let add = function(){}",
+      "let add(){}",
+      "let add=()=>{}",
+    ],
+    correctAnswer: "let add = function(){}",
+  },
 ];
