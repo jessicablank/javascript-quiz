@@ -55,7 +55,7 @@ let questions = [
   },
   {
     text:
-      "Select the function expressin",
+      "Select the function expression",
     answers: [
       "let add = function(){}",
       "let add(){}",

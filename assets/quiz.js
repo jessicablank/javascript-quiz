@@ -9,17 +9,26 @@ let score = numOfQuestions;
 
 let scorePercent;
 
-// Assigning variables commonly accessed in DOM elements
+// Assigning variables accessed in DOM id elements
 
 let answerEl = document.getElementById("answers");
-let responseEl = document.getElementById("response");
+let endScreenEl = document.getElementById("end-screen");
+let highScoreHelperEl = document.getElementById("highScore-helper")
 let homePage = document.getElementById("home-page");
+let initialsEl = document.getElementById("user-initials");
 let questionEl = document.getElementById("questions");
+let questionText = document.getElementById("question-text");
+let quizScoreResultEl = document.getElementById("quiz-score");
+let quizTimeResultEl = document.getElementById("quiz-time");
+let responseEl = document.getElementById("response");
+let quizScorePercentageResultEl = document.getElementById(
+  "quiz-score-percent");
 let startBtn = document.getElementById("start-btn");
 let submitBtn = document.getElementById("submit");
 let timerEl = document.getElementById("time");
-let initialsEl = document.getElementById("user-initials");
-let highScoreHelperEl = document.getElementById("highScore-helper")
+
+
+
 
 // Upon Start Button click 
 // hide home-page, show questions, start timer 
@@ -46,7 +55,7 @@ function timerCountdown() {
 function getQuestion() {
   let currentQuestion = questions[currentQuestionIndex];
 
-  let questionText = document.getElementById("question-text");
+  
   questionText.textContent = currentQuestion.text;
 
   // Clear any old question answers
@@ -123,20 +132,15 @@ function stopQuiz() {
 
   // Add a delay to prevent overlap with question response
   setTimeout(function () {
-    let endScreenEl = document.getElementById("end-screen");
+    
     endScreenEl.removeAttribute("class");
     questionEl.setAttribute("class", "hide");
   }, 1000);
 
-  let quizTimeResultEl = document.getElementById("quiz-time");
   quizTimeResultEl.textContent = time;
 
-  let quizScoreResultEl = document.getElementById("quiz-score");
   quizScoreResultEl.textContent = score;
 
-  let quizScorePercentageResultEl = document.getElementById(
-    "quiz-score-percent"
-  );
   let scorePercent = Math.round((score / numOfQuestions) * 100);
   quizScorePercentageResultEl.textContent = scorePercent;
 }
