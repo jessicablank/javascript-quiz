@@ -9,7 +9,7 @@ let score = numOfQuestions;
 
 let scorePercent;
 
-// Id's used in game logic
+// Assigning variables commonly accessed in DOM elements
 
 let answerEl = document.getElementById("answers");
 let responseEl = document.getElementById("response");
@@ -18,8 +18,11 @@ let questionEl = document.getElementById("questions");
 let startBtn = document.getElementById("start-btn");
 let submitBtn = document.getElementById("submit");
 let timerEl = document.getElementById("time");
+let initialsEl = document.getElementById("user-initials");
+let highScoreHelperEl = document.getElementById("highScore-helper")
 
-//hide home-page, show questions, start timer
+// Upon Start Button click 
+// hide home-page, show questions, start timer 
 function startQuiz() {
   homePage.setAttribute("class", "hide");
   questionEl.removeAttribute("class");
@@ -141,11 +144,10 @@ function stopQuiz() {
 //Save high scores to local storage
 
 function saveHighScores() {
-  let initialsEl = document.getElementById("user-initials");
   let initials = initialsEl.value.trim();
 
   if (initials === ""){
-    let highScoreHelperEl = document.getElementById("highScore-helper")
+    
     highScoreHelperEl.textContent = "Please enter your initials"
   } else {
  // set initials to local storage along with time
