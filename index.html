@@ -56,7 +56,7 @@
 
         <!-- Quiz Home Page -->
     <main class="container">
-      <section id="home-page" class="show">
+      <section id="home-page">
         <h1>Javascript Essentials Challenge</h1>
         <p>
           Answer as many Javascript questions as you can before the
@@ -90,7 +90,7 @@
 
 <!-- Quiz Questions Page -->
     <article class="container">
-      <div id="questions" class="hide">
+      <div id="questions" hidden>
           <h3 id="question-text"></h3>
           <div id="answers" class="answers"></div>
           <div class="custom-shape-divider-bottom-1607409541">
@@ -103,15 +103,15 @@
       </div>
     </article>
 
-    <!-- Quiz Response Styling -->
-
+    <!-- Quiz Answer Response Styling -->
     <section class="container z-depth-5">
-      <div id="response" class="response hide">
+      <div id="response" hidden>
       </div>
     </section>
+
 <!-- Quiz End -->
     <section class="container">
-      <div id="end-screen" class="quiz-end hide">
+      <div id="end-screen" hidden>
         <h2>Well Done!</h2>
         <p>You completed the quiz in <span class="quiz-results" id="quiz-time"> </span> seconds.</p>
         <p>And you answered <span class="quiz-results" id="quiz-score"> </span> questions correctly.

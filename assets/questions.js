@@ -1,4 +1,4 @@
-let questions = [
+const questions = [
   {
     text: "Strings in Javascript are enclosed in what type of punctuation?",
     answers: [

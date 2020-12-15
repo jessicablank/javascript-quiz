@@ -11,16 +11,16 @@ let scorePercent;
 
 // Assigning variables accessed in DOM id elements
 
-let answerEl = document.getElementById("answers");
-let endScreenEl = document.getElementById("end-screen");
-let highScoreHelperEl = document.getElementById("highScore-helper")
+let answerElement = document.getElementById("answers");
+let endScreenElement = document.getElementById("end-screen");
+let highScoreHelperElement = document.getElementById("highScore-helper")
 let homePage = document.getElementById("home-page");
-let initialsEl = document.getElementById("user-initials");
-let questionEl = document.getElementById("questions");
+let userInitialsElement = document.getElementById("user-initials");
+let questionElement = document.getElementById("questions");
 let questionText = document.getElementById("question-text");
-let quizScoreResultEl = document.getElementById("quiz-score");
-let quizTimeResultEl = document.getElementById("quiz-time");
-let responseEl = document.getElementById("response");
+let quizScoreElement = document.getElementById("quiz-score");
+let quizTimeResultElement = document.getElementById("quiz-time");
+let quizResponseElement = document.getElementById("response");
 let quizScorePercentageResultEl = document.getElementById(
   "quiz-score-percent");
 let startBtn = document.getElementById("start-btn");
@@ -33,8 +33,8 @@ let timerEl = document.getElementById("time");
 // Upon Start Button click 
 // hide home-page, show questions, start timer 
 function startQuiz() {
-  homePage.setAttribute("class", "hide");
-  questionEl.removeAttribute("class");
+  homePage.hidden = true;
+  questionElement.hidden = false;
   timerCountdown();
   getQuestion();
 }
@@ -59,7 +59,7 @@ function getQuestion() {
   questionText.textContent = currentQuestion.text;
 
   // Clear any old question answers
-  answerEl.innerHTML = "";
+  answerElement.innerHTML = "";
 
   // Dynamically add a button to select each answer
   currentQuestion.answers.forEach(listAnswers);
@@ -76,7 +76,7 @@ function getQuestion() {
     answerBtn.onclick = answerClick;
 
     // display on the page
-    answerEl.appendChild(answerBtn);
+    answerElement.appendChild(answerBtn);
   }
 }
 
@@ -91,28 +91,28 @@ function answerClick() {
     }
 
     timerEl.textContent = time;
-    responseEl.setAttribute("class", "response");
-    questionEl.setAttribute("class", "hide");
+    quizResponseElement.hidden = false;
+    questionElement.hidden = true;
     setTimeout(function () {
-      responseEl.setAttribute("class", "response hide");
+      quizResponseElement.hidden = true;
     }, 1000);
 
-    responseEl.textContent = "Nope";
+    quizResponseElement.textContent = "Nope";
   } else {
-    responseEl.setAttribute("class", "response");
-    questionEl.setAttribute("class", "hide");
+    quizResponseElement.hidden = false;
+    questionElement.hidden = true;
     setTimeout(function () {
-      responseEl.setAttribute("class", "response hide");
-      questionEl.removeAttribute("class");
+      quizResponseElement.hidden = true;
+      questionElement.hidden = false;
     }, 1000);
-    responseEl.textContent = "Heck Yeah!";
+    quizResponseElement.textContent = "Heck Yeah!";
   }
 
   //Tell the user how they did for 1 sec
-  responseEl.setAttribute("class", "response");
+  quizResponseElement.hidden = false;
   setTimeout(function () {
-    responseEl.setAttribute("class", "response hide");
-    questionEl.removeAttribute("class");
+    quizResponseElement.hidden = true;
+    questionElement.hidden = false;
   }, 1000);
 
   // Check to see if there are questions. If so, continue the quiz. 
@@ -133,13 +133,13 @@ function stopQuiz() {
   // Add a delay to prevent overlap with question response
   setTimeout(function () {
     
-    endScreenEl.removeAttribute("class");
-    questionEl.setAttribute("class", "hide");
+    endScreenElement.hidden = false;
+    questionElement.hidden = true;
   }, 1000);
 
-  quizTimeResultEl.textContent = time;
+  quizTimeResultElement.textContent = time;
 
-  quizScoreResultEl.textContent = score;
+  quizScoreElement.textContent = score;
 
   let scorePercent = Math.round((score / numOfQuestions) * 100);
   quizScorePercentageResultEl.textContent = scorePercent;
@@ -148,11 +148,12 @@ function stopQuiz() {
 //Save high scores to local storage
 
 function saveHighScores() {
-  let initials = initialsEl.value.trim();
+  let initials = userInitialsElement.value.trim();
 
   if (initials === ""){
     
-    highScoreHelperEl.textContent = "Please enter your initials"
+    highScoreHelperElement
+  .textContent = "Please enter your initials"
   } else {
  // set initials to local storage along with time
     let highScores =
