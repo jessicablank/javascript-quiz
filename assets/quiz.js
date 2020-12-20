@@ -54,8 +54,6 @@ function timerCountdown() {
 
 function getQuestion() {
   let currentQuestion = questions[currentQuestionIndex];
-
-  
   questionText.textContent = currentQuestion.text;
 
   // Clear any old question answers
@@ -146,14 +144,12 @@ function stopQuiz() {
 }
 
 //Save high scores to local storage
-
 function saveHighScores() {
   let initials = userInitialsElement.value.trim();
 
   if (initials === ""){
     
-    highScoreHelperElement
-  .textContent = "Please enter your initials"
+    highScoreHelperElement.textContent = "Please enter your initials"
   } else {
  // set initials to local storage along with time
     let highScores =

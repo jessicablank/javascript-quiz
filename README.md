@@ -49,6 +49,7 @@ Runs in browser and no dependencies. The [VS Code Live SASS Compiler](https://ma
 ## Technologies Used
 I challenged myself to use Materialize framework along with SCSS because I am more comfortable with [Bootstrap](https://getbootstrap.com/). I found both CSS tools to be an excellent combination for creating a colorful and responsive application.
 
+- [GitHub Corners](https://tholman.com/github-corners/)
 - [Materialize CSS](https://materializecss.com/)
 - [Sass CSS](https://sass-lang.com/)
 - [Shape Divider App](https://www.shapedivider.app/)
